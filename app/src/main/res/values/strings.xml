@@ -17,6 +17,7 @@
     <string name="service">Услуга:</string>
     <string name="additive">Дополнения</string>
     <string name="service_type">Тип услуги:</string>
+    <string name="error_fields_empty">Пожалуйста заполните все поля</string>
 
     <array name="types_of_service_one">
         <item>Type 1</item>
