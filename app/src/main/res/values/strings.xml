@@ -13,6 +13,10 @@
     <string name="additive_3">Additive 3</string>
     <string name="choose_service_type">Выберите вид услуги</string>
     <string name="make_order">Сделать заказ</string>
+    <string name="name">Имя:</string>
+    <string name="service">Услуга:</string>
+    <string name="additive">Дополнения</string>
+    <string name="service_type">Тип услуги:</string>
 
     <array name="types_of_service_one">
         <item>Type 1</item>
