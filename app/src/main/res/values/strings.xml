@@ -4,4 +4,23 @@
     <string name="input_you_name_hint">Имя пользователя: </string>
     <string name="input_your_password_hint">Пароль: </string>
     <string name="sign_in_button">Войти</string>
+    <string name="greetings">Привет %s! Что желаете?</string>
+    <string name="service_1">Service 1</string>
+    <string name="service_2">Service 2</string>
+    <string name="additives">Дополнение к услуге: %s?</string>
+    <string name="additive_1">Additive 1</string>
+    <string name="additive_2">Additive 2</string>
+    <string name="additive_3">Additive 3</string>
+    <string name="choose_service_type">Выберите вид услуги</string>
+    <string name="make_order">Сделать заказ</string>
+
+    <array name="types_of_service_one">
+        <item>Type 1</item>
+        <item>Type 2</item>
+        <item>Type 3</item>
+    </array>
+    <array name="types_of_service_two">
+        <item>Type 4</item>
+        <item>Type 5</item>
+    </array>
 </resources>

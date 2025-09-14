@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakeOrderActivity">
+
+    <TextView
+        android:id="@+id/textViewGreetings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        android:text="@string/greetings"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupServices"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewAdditives"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGreetings">
+
+        <RadioButton
+            android:id="@+id/radioButtonServiceOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/service_1"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioButtonServiceTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:text="@string/service_2"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewAdditives"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        android:text="@string/additives"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAdditive2"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupServices" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAdditive1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:text="@string/additive_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxAdditive2"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxAdditive2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditives"
+        app:layout_constraintTop_toTopOf="@id/checkBoxAdditive2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAdditive2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/additive_2"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewServiceType"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxAdditive3"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxAdditive1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAdditives" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAdditive3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/additive_3"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxAdditive2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxAdditive2"
+        app:layout_constraintTop_toBottomOf="@id/textViewAdditives"
+        app:layout_constraintTop_toTopOf="@id/checkBoxAdditive2" />
+
+    <TextView
+        android:id="@+id/textViewServiceType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="8dp"
+        android:text="@string/choose_service_type"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerServiceOne"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAdditive2" />
+
+    <Spinner
+        android:id="@+id/spinnerServiceOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:entries="@array/types_of_service_one"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMakeOrder"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textViewServiceType" />
+
+    <Spinner
+        android:id="@+id/spinnerServiceTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:entries="@array/types_of_service_two"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMakeOrder"
+        app:layout_constraintTop_toBottomOf="@+id/textViewServiceType" />
+
+    <Button
+        android:id="@+id/buttonMakeOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/make_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerServiceOne" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
