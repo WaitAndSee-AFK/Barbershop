@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadNextScreen(userName: String) {
-        val intent = MakeOrderActivity().newIntent(this, userName)
+        val intent = MakeOrderActivity.newIntent(this, userName)
         startActivity(intent)
     }
 
