@@ -75,7 +75,7 @@ class MakeOrderActivity : AppCompatActivity() {
         if (checkBoxAdditive1.isChecked) {
             additives.add(checkBoxAdditive1.text.toString())
         }
-        if (radioButtonServiceOne.isChecked && checkBoxAdditive2.isChecked) {
+        if (radioButtonServiceTwo.isChecked && checkBoxAdditive2.isChecked) {
             additives.add(checkBoxAdditive2.text.toString())
         }
         if (checkBoxAdditive3.isChecked) {
